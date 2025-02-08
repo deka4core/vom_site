@@ -8,6 +8,25 @@
   		font-family: 'BreeCYR';
   		src: url('BreeCYR.ttf');
 	}
+    .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Три колонки */
+            gap: 10px; /* Расстояние между элементами */
+    }
+
+    /* Медиа-запрос для адаптивности */
+    @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Две колонки */
+            }
+    }
+
+    @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Одна колонка */
+            }
+    }
+    </style>
 </style>
 </head>
 <body style="margin: 0px; margin-bottom: 5px;">
@@ -46,7 +65,7 @@
 		</div>
 
 		<div class="price2" style="min-height: 200px; background-color: #BB9457; padding-top: 5%; padding-bottom: 5%;">
-			<div style="display: grid;  padding-inline: 60px;">
+			<div style="display: grid; padding-inline: 60px;">
 				<div style="grid-row: 1/2; grid-column: 2/3; font-family: 'BreeCYR', Arial; justify-items: center;">
 					<h1>VOM 50 SET Brian May Inspiration</h1>
 					<p>Вдохновленный уникальным стилем культового гитариста Queen, этот набор сочетает в себе миниатюрный ламповый усилитель MV50 Head и идеально подобранный кабинет. Компактный, но мощный, он приносит насыщенный, теплый и детализированный звук, который покорит как фанатов классического рока, так и современных музыкантов.
@@ -74,26 +93,19 @@
 		<div>
 			<img src="Vom-amplug_Banner_1900x500.png"  style="width: 100%; ">
 		</div>
-		<div style="display: grid; padding-inline: 20px; grid-column-gap: 20px; background-image: url('featured-vom-background.jpg');">
-			<h1 style="grid-row: 1/2; grid-column: 1/4; justify-self: center;">Достигни совершенства исполнения с AmPlug Series</h1>
-			<div style="grid-row: 2/3; grid-column: 1/2; justify-self: center;">
-				<img src="Vom-amPlug3-Headphone-Guitar-Amplifier-UK-Drive-Model.png" style="margin-left: 20px; width: 70%">			
-			</div>
-			<div style="grid-row: 2/3; grid-column: 2/3; justify-self: center;">
-				<img src="Vom-amPlug3-Headphone-Guitar-Amplifier-AC30-Model.png" style="margin-left: 20px; width: 70%">
-			</div>
-			<div style="grid-row: 2/3; grid-column: 3/4; justify-self: center;">
-				<img src="Vom-amPlug3-Headphone-Guitar-Amplifier-Bass-Model.png" style="margin-left: 20px; width: 70%">
-			</div>
-			<div style="grid-row: 3/4; grid-column: 1/2; justify-self: center">
+		<h1 style="justify-self: center;">Достигни совершенства исполнения с AmPlug Series</h1>
+		<div class="grid-container" style="padding-inline: 20px; background-image: url('featured-vom-background.jpg');">
+			<div style="justify-self: center;">
+				<img src="Vom-amPlug3-Headphone-Guitar-Amplifier-UK-Drive-Model.png" style="margin-left: 20px; width: 70%">
 				<h1 style="text-align: center;">UK Drive</h1>
 				<ul>
 		        <li><span style="font-weight: bold; color: #6F1D1B;">CH1</span>: Насыщенный винтажный звук с теплыми тонами, идеально подходящий для классического рока и блюза.</li>
 		        <li><span style="font-weight: bold; color: #6F1D1B;">CH2</span>: Агрессивный и резкий дисторшн для яркого и мощного звучания, который выделит вас на сцене.</li>
 			    </ul>
-			    <p>Погрузитесь в атмосферу легендарных британских усилителей и создавайте свой уникальный звук с UK Drive!</p>
+			    <p>Погрузитесь в атмосферу легендарных британских усилителей и создавайте свой уникальный звук с UK Drive!</p>		
 			</div>
-			<div style="grid-row: 3/4; grid-column: 2/3; justify-self: center">
+			<div style="justify-self: center;">
+				<img src="Vom-amPlug3-Headphone-Guitar-Amplifier-AC30-Model.png" style="margin-left: 20px; width: 70%">
 				<h1 style="text-align: center;">AC30</h1>
 			    <p>Легендарный звук VOX AC30 теперь в вашем распоряжении!</p>
 			    <ul>
@@ -102,7 +114,8 @@
 			    </ul>
 			    <p>Погрузитесь в атмосферу классического британского звука, который вдохновлял поколения музыкантов, от The Beatles до современных исполнителей. AC30 — это не просто усилитель, это легенда!</p>
 			</div>
-			<div style="grid-row: 3/4; grid-column: 3/4; justify-self: center">
+			<div style="justify-self: center;">
+				<img src="Vom-amPlug3-Headphone-Guitar-Amplifier-Bass-Model.png" style="margin-left: 20px; width: 70%">
 				<h1 style="text-align: center;">Bass</h1>
 			    <p>Идеальный звук бас-усилителя для любого жанра!</p>
 			    <ul>
